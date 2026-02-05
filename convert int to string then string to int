@@ -1,0 +1,7 @@
+
+   //to convert intiger to string
+String s = String.valueOf(n);
+srting s = Intiger.tostring(n);
+   //to convert srting to intiger
+int s = integer.parseInt(s);
+int num =Integer.ValueOf(s);
