@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+        
+        // Operation 1: Sum of lengths
+        int sum = a.length() + b.length();
+        System.out.println(sum);
+        
+        // Operation 2: Lexicographical comparison
+        if (a.compareTo(b) > 0) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+        
+        // Operation 3: Capitalize first letter
+        String A = a.substring(0,1).toUpperCase() + a.substring(1);
+        String B = b.substring(0,1).toUpperCase() + b.substring(1);
+        
+        System.out.println(A + " " + B);
+    }
+}
+
+
