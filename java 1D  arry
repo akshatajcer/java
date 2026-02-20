@@ -1,0 +1,27 @@
+public class Solution {
+
+    public static boolean canWin(int leap, int[] game) {
+        return canWinFrom(0, leap, game);
+    }
+
+    private static boolean canWinFrom(int i, int leap, int[] game) {
+
+        // 1️⃣ If we reach or cross end → WIN
+        if (i >= game.length) {
+            return true;
+        }
+
+        // 2️⃣ If index invalid or blocked → STOP
+        if (i < 0 || game[i] == 1) {
+            return false;
+        }
+
+        // 3️⃣ Mark as visited
+        game[i] = 1;
+
+        // 4️⃣ Try all possible moves
+        return canWinFrom(i + leap, leap, game) ||
+               canWinFrom(i + 1, leap, game) ||
+               canWinFrom(i - 1, leap, game);
+    }
+}
